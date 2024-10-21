@@ -3,7 +3,6 @@ package handlers
 import (
 	"io"
 	"net/http"
-	"regexp"
 	"strings"
 
 	"github.com/gofiber/fiber/v2"
@@ -27,13 +26,13 @@ func BeefSummary(c *fiber.Ctx) error {
 	}
 
 	// clean data
-	re := regexp.MustCompile(`[^a-zA-Z0-9-\s]+`)
-	clean := re.ReplaceAllString(string(b), "")
-	clean2 := strings.Fields(clean)
+	data := strings.ReplaceAll(string(b), ".", "")
+	data = strings.ReplaceAll(data, ",", "")
+	dataClean := strings.Fields(data)
 
 	// count beef name
 	mapBeefName := map[string]int{}
-	for _, v := range clean2 {
+	for _, v := range dataClean {
 		beef := strings.ToLower(v)
 		if val, ok := mapBeefName[beef]; !ok {
 			mapBeefName[beef] = 1

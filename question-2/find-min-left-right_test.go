@@ -32,6 +32,36 @@ func TestFindMinLeftRight(t *testing.T) {
 			args: args{input: "RRL=R"},
 			want: "012001",
 		},
+		{
+			name: "test-case-5",
+			args: args{input: "LLLLL"},
+			want: "543210",
+		},
+		{
+			name: "test-case-6",
+			args: args{input: "=L=L=L"},
+			want: "3322110",
+		},
+		{
+			name: "test-case-7",
+			args: args{input: "L=L=L="},
+			want: "3221100",
+		},
+		{
+			name: "test-case-8",
+			args: args{input: "R=R=R="},
+			want: "0112233",
+		},
+		{
+			name: "test-case-9",
+			args: args{input: "=R=R=R"},
+			want: "0011223",
+		},
+		{
+			name: "test-case-10",
+			args: args{input: "==LLL"},
+			want: "333210",
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
