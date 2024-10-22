@@ -4,16 +4,19 @@
 ``` 
 Source code location: 'question-1/find-max-tree.go'
 Unit Test code location: 'question-1/find-max-tree_test.go'
+Run: go test
 ```
 
 ### 2. จับฉันให้ได้สิ ซ้าย-ขวา-เท่ากับ
 ``` 
 Source code location: 'question-2/find-min-left-right.go'
 Unit Test code location: 'question-2/find-min-left-right_test.go'
+Run: go run .
 ```
 
 ### 3. พาย ไฟ ได - Pie Fire Dire
 ``` 
 Source code location: 'handlers/beef-summary.go'
 Route: 'http://localhost:3000/beef/summary'
+Run: go run main.go
 ```
