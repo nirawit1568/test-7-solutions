@@ -1,10 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func FindMinLeftRight(input string) string {
 
 	result := make([]int, len(input)+1)
+
+	input = strings.ToUpper(input)
 
 	// ฟังชั่นสำหรับเพิ่มตัวเลขให้ตรงตามเงื่อนไข
 	changeNumber := func() {
