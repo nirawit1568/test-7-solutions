@@ -34,9 +34,9 @@ func FindMinLeftRight(input string) string {
 			case '=':
 				// ถ้าค่าไม่เท่ากันระหว่างขวากับซ้าย ให้อัพเดทเลย
 				if right != left {
-					if i == 0 { // ถ้า "=" อยู่ตัวแรกสุดให้เลือกเอาค่าจากขวามาใส่ซ้าย
+					if right > left {
 						result[i] = right
-					} else { // ถ้า "=" อยู่ตัวสุดท้ายให้เลือกเอาค่าจากซ้ายมาใส่ขวาา
+					} else {
 						result[i+1] = left
 					}
 				}
